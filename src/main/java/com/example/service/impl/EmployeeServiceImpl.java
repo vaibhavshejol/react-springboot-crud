@@ -17,32 +17,31 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee createEmployee(Employee employee) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createEmployee'");
+        return employeeRepository.save(employee);
     }
 
     @Override
     public Employee getEmployee(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getEmployee'");
+        return employeeRepository.findById(id).get();
     }
 
     @Override
     public List<Employee> getEmployees() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getEmployees'");
+        return employeeRepository.findAll();
     }
 
     @Override
     public Employee updatEmployee(Long id, Employee employee) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'updatEmployee'");
+        if(!employeeRepository.existsById(id)){
+            return null;
+        }
+        employee.setId(id);
+        return employeeRepository.save(employee);
     }
 
     @Override
     public void deleteEmployee(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteEmployee'");
+        employeeRepository.deleteById(id);
     }
     
 }
