@@ -1,0 +1,63 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+
+### For React App ###
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/reactapp/node_modules
+/reactapp/.pnp
+/reactapp.pnp.js
+
+# testing
+/reactapp/coverage
+
+# production
+/reactapp/build
+
+# misc
+/reactapp.DS_Store
+/reactapp.env.local
+/reactapp.env.development.local
+/reactapp.env.test.local
+/reactapp.env.production.local
+
+/reactapp/npm-debug.log*
+/reactapp/yarn-debug.log*
+/reactapp/yarn-error.log*
